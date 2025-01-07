@@ -1,35 +1,19 @@
 import time
 
 def run():
+    # Pergunta inicial sobre continuar ou sair
+    escolha_continuar = input("Deseja prosseguir com o cálculo? (S para sim / 0 para sair): ").strip().upper()
+
     while True:
-        print("=== Menu Principal ===")
-        print("1. Continuar")
-        print("0. Sair")
-        
-        escolha = input("\nDigite sua escolha: ").strip()
-        
-        if escolha == "1":
-            print("Você escolheu a Calculadora de Carbono.")
-            escolha_continuar = input("Deseja prosseguir com o cálculo? (S para sim / 0 para voltar ao menu): ").strip().upper()
-            
-            if escolha_continuar == "S":
-                calcular_carbono()
-            elif escolha_continuar == "0":
-                print("Voltando ao menu principal...")
-                time.sleep(0.5)
-                continue
-            else:
-                print("Opção inválida! Voltando ao menu principal...")
-                time.sleep(0.5)
-                continue
-        
-        elif escolha == "0":
+        if escolha_continuar == "S":
+            calcular_carbono()
+            escolha_continuar = input("Deseja fazer outro cálculo? (S para sim / 0 para sair): ").strip().upper()
+        elif escolha_continuar == "0":
             print("Saindo do programa...")
             break
-        
         else:
-            print("Opção inválida! Tente novamente.")
-            time.sleep(1)
+            print("Opção inválida! Saindo do programa...")
+            break
 
 def calcular_carbono():
     try:
@@ -59,15 +43,6 @@ def calcular_carbono():
     
     except ValueError:
         print("Entrada inválida! Por favor, digite apenas números.")
-    
-    escolha = input("Deseja fazer outro cálculo? (S para sim / 0 para voltar ao menu): ").strip().upper()
-    
-    if escolha == "0":
-        print("Voltando ao menu principal...")
-        time.sleep(0.5)
-    elif escolha != "S":
-        print("Opção inválida! Voltando ao menu principal...")
-        time.sleep(0.5)
 
 if __name__ == "__main__":
     run()
