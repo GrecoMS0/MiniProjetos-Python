@@ -2,12 +2,14 @@ import time
 import calculadora_carbono
 import conversor_unidades
 import dado_viciado
+import cronometro
 
 def menu():
     opcoes ={
         "1": ("Calculadora de Carbono", calculadora_carbono.run),
         "2": ("Conversor de Unidades", conversor_unidades.run),
         "3": ("Dado Viciado", dado_viciado.run),
+        "4": ("Cronômetro", cronometro.run),
         "0": ("Sair", None),
     }
     
