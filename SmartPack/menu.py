@@ -3,13 +3,16 @@ import calculadora_carbono
 import conversor_unidades
 import dado_viciado
 import cronometro
+import conversor_moedas
 
 def menu():
-    opcoes ={
+    opcoes = {
         "1": ("Calculadora de Carbono", calculadora_carbono.run),
         "2": ("Conversor de Unidades", conversor_unidades.run),
         "3": ("Dado Viciado", dado_viciado.run),
         "4": ("Cronômetro", cronometro.run),
+        "5": ("Conversor de Moedas", conversor_moedas.run),
+        #"6": ("", simulador_loteria.run),
         "0": ("Sair", None),
     }
     
