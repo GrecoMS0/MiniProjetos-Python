@@ -4,6 +4,7 @@ import conversor_unidades
 import dado_viciado
 import cronometro
 import conversor_moedas
+import simulador_loteria
 
 def menu():
     opcoes = {
@@ -12,7 +13,7 @@ def menu():
         "3": ("Dado Viciado", dado_viciado.run),
         "4": ("Cronômetro", cronometro.run),
         "5": ("Conversor de Moedas", conversor_moedas.run),
-        #"6": ("", simulador_loteria.run),
+        "6": ("Simulador de Loteria", simulador_loteria.run),
         "0": ("Sair", None),
     }
     
